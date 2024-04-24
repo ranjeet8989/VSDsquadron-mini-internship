@@ -10,5 +10,5 @@ step_2- RISC V GNU Tool chain installation.
 
 step_3 -Yosys eda tool installation.
 
-![image] (https://github.com/ranjeet8989/VSDsquadron-mini-internship/assets/84927691/fa91433c-1ac5-4826-94a4-711ee60725c6)
+![image].(https://github.com/ranjeet8989/VSDsquadron-mini-internship/assets/84927691/fa91433c-1ac5-4826-94a4-711ee60725c6).
 
