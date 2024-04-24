@@ -18,6 +18,15 @@ step_3 -Yosys eda tool installation.
 
 ![image](https://github.com/ranjeet8989/VSDsquadron-mini-internship/assets/84927691/c7f6baf3-7183-4c49-987d-6965bb494960)
 
+step_3 - iVerilog eda tool installation.
+![image](https://github.com/ranjeet8989/VSDsquadron-mini-internship/assets/84927691/54b034bd-a9ee-4d8b-9d1d-3fbb0356f3f8)
+
+step_4 - gtkwave installation.
+![image](https://github.com/ranjeet8989/VSDsquadron-mini-internship/assets/84927691/54f9d7e4-b369-4945-a997-2e42cb5466c7)
+
+
+
+
 
 
 
