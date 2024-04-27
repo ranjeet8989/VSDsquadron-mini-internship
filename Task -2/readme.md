@@ -22,6 +22,16 @@
   - Control and Status Register (CSR) Instructions:-RISCV -ISA defines control and status registers that are used for privileged     
                                                    operations.
 
+    # Types of levels of access and control of system resources :-
+
+    |             # Unpriviliged State                         |         # Privileged State                                          |
+    |- Processor operates with restricted access to certain    | - Processor has a full access to all instruction and system resource|
+    | instructions and system resources.
+    |- User level programmed run in this state.                | - Operating system kernals & system level software run in this state|
+    | - prevents user programs from interfering with critical  | - it allows oerating system to enforce security ploicies, manage    |
+    |   system functions.                                      |   memory and coordinate teh execution of multiple process or threads|
+    
+
     
   
                               
