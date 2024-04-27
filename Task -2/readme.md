@@ -87,7 +87,7 @@ PC (programme counter) is another additional register whcih hold the address of 
 
      31       25 24       20 19       15 14       12 11        7 6  0
   +----------+----------+----------+----------+----------+----------+
-  |  funct7  |   rs2    |   rs1    |   funct3 |   rd     |  opcode  |
+  |  funct7  |   rs2    |   rs1    |   funct3 |   rd     |  opcode  
   +----------+----------+----------+----------+----------+----------+
 
    - funct7(7 bits) :- it specifies the operatio code of instruction.
@@ -103,7 +103,7 @@ PC (programme counter) is another additional register whcih hold the address of 
      
     31                  20 19   15 14     12 11        7 6         0
   +----------+----------+----------+----------+----------+----------+
-  |  imm[11:0]          |   rs1    |  funct3 |   rd     |  opcode   |
+  |  imm[11:0]          |   rs1    |  funct3 |   rd     |  opcode   
   +----------+----------+----------+----------+----------+----------+
 
 
