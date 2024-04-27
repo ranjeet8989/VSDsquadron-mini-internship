@@ -6,7 +6,7 @@
   - 32-bit Addressing:- The RISCV32 ISA operates on 32 bit addresses which allows it to access upto 4GB of memory directly.
   
   - Base Interger instruction:-Base refers to fundamental or essential subset of instruction that from the core of ISA.it includes
-                              minimal set of instrction that are sufficient to provide basic functionality for software     
+                              minimal set of instruction that are sufficient to provide basic functionality for software     
                               development,toolchain support like integer arithmetic and logical instructions, such as addition,   
                               subtraction, bitwise AND/OR/XOR, shifting, and comparison instructions.
 
@@ -21,5 +21,7 @@
   
   - Control and Status Register (CSR) Instructions:-RISCV -ISA defines control and status registers that are used for privileged     
                                                    operations.
+
+    
   
                               
