@@ -75,7 +75,7 @@ PC (programme counter) is another additional register whcih hold the address of 
 |-----|
 | PC |
 
-
+*Fig 1: RISC-V base unprivileged integer register state.*
 
 
 
