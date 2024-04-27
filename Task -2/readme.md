@@ -27,9 +27,9 @@
          
   | Unpriviliged State | Privileged State |
 |----------|----------|
-| Processor operates with restricted access to certain instructions and system resources, Col 1 | Processor has a full access to all instruction and system resource, Col 2 |
-| User level programmed run in this state, Col 1 | Operating system kernals & system level software run in this state, Col 2 |
-| prevents user programs from interfering with critical system functions, Col 1 | it allows oerating system to enforce security ploicies, manage,memory and coordinate teh execution multiple process or threads, Col 2 |
+| Processor operates with restricted access to certain instructions and system resources | Processor has a full access to all instruction and system resource |
+| User level programmed run in this state | Operating system kernals & system level software run in this state |
+| prevents user programs from interfering with critical system functions | it allows oerating system to enforce security ploicies, manage,memory and coordinate teh execution multiple process or threads |
 
 
   
