@@ -1,8 +1,7 @@
 # RISCV 32I Instruction Set Architecture :-
 
 1.Introduction 
-  RISCV 32I ISA is the base integer instruction set architecture for RISCV Processors.it is very similar to early RISC Processor except   
-  with no branch delay.Here's a brief overview of the key features and characteristics:
+  RISCV 32I ISA is the base integer instruction set architecture for RISCV Processors.it is very similar to early RISC Processor except  with no branch delay.Here's a brief overview of the key features and characteristics:
 
   - 32-bit Addressing:- The RISCV32 ISA operates on 32 bit addresses which allows it to access upto 4GB of memory directly.
   
