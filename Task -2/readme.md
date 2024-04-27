@@ -36,8 +36,7 @@
 here , in this state we have total 32 registers.of each 32 bits wide .Register x0 is hardwired with all bits equal to 0.general purpose registers x1 -x31 hold value as signed or unsigned integer values.
 PC (programme counter) is another additional register whcih hold the address of current instruction.
 
-|           |
-|-----------|
+
 | x0 / zero |
 | x1 |
 | x2 |
