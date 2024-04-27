@@ -161,10 +161,9 @@ The "U" Type instruction in RISC-V architecture is used for unconditional jump i
 - rd: Destination register, five bits, specifying the destination register where the result of the operation is stored.
 - opcode: Operation code, seven bits, specifying the type of instruction (e.g., unconditional jump).
 
-# **Here's a brief summary of the "U" Type instruction set:**
--LUI (Load Upper Immediate): Load a 20-bit immediate value into the upper 20 bits of a register, zeroing the lower 12 bits.
--AUIPC (Add Upper Immediate to PC): Add a 20-bit immediate value to the current PC (Program Counter) value and store the result in a     
- register.
+**Here's a brief summary of the "U" Type instruction set:**
+- LUI (Load Upper Immediate): Load a 20-bit immediate value into the upper 20 bits of a register, zeroing the lower 12 bits.
+- AUIPC (Add Upper Immediate to PC): Add a 20-bit immediate value to the current PC (Program Counter) value and store the result in a      register.
 
 6. J Type
    This kind of instruction is mainlu used for jump instructions.these instruction allows the program to jump to a spefic memory address
@@ -181,7 +180,7 @@ The "U" Type instruction in RISC-V architecture is used for unconditional jump i
 - rd: Destination register, five bits, specifying the destination register where the result of the operation is stored.
 - opcode: Operation code, seven bits, specifying the type of instruction (e.g., jump).
 
-# **Here's a brief summary of the "J" Type instruction set:**
+  **Here's a brief summary of the "J" Type instruction set:**
 
 - JAL (Jump and Link): Jump to a target address and link (store the return address) into a register.
 - JALR (Jump and Link Register): Jump to a target address with a register offset and link (store the return address) into a register.
