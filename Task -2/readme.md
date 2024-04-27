@@ -85,7 +85,7 @@ PC (programme counter) is another additional register whcih hold the address of 
    fields:
    
 
-  31       25 24      20 19       15 14       12 11     7 6         0
+  31       25 24      20 19       15 14      12 11     7 6         0
   +----------+----------+----------+----------+----------+----------+
   |  funct7  |   rs2    |   rs1    |   funct3 |   rd     |  opcode  |
   +----------+----------+----------+----------+----------+----------+
@@ -104,11 +104,12 @@ PC (programme counter) is another additional register whcih hold the address of 
      
     31                  20 19   15 14     12 11        7 6         0
   +----------+----------+----------+----------+----------+----------+
-  |  imm[11:0]          |   rs1    |  funct3 |   rd     |  opcode   
+  |  imm[11:0]          |   rs1    |  funct3 |   rd     |  opcode   |
   +----------+----------+----------+----------+----------+----------+
 
 
-  - imm (12 bit) :-This field contains a 12-bit immediate value, sign-extended to   32 bits, which is used as an operand in the instruction.
+  - imm (12 bit) :-This field contains a 12-bit immediate value, sign-extended to   32 bits, which is used as an operand in the   
+    instruction.
   - rs1: Source register 1. This field indicates the source register used by the instruction.
   - funct3: Function code 3. This field specifies the specific operation within the opcode category.
   - rd:  This field indicates the destination register where the result of the operation is stored.
