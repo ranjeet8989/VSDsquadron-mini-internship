@@ -71,6 +71,8 @@ PC (programme counter) is another additional register whcih hold the address of 
 | x30 |
 | x31 |
 
+|     |
+|-----|
 | PC |
 
 
