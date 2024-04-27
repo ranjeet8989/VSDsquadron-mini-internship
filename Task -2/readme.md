@@ -24,13 +24,24 @@
 
     # Types of levels of access and control of system resources :-
 
+ 
+    | Column 1 | Column 2 | Column 3 | Column 4 |
+    |----------|----------|----------|----------|
+    | Row 1, Col 1 | Row 1, Col 2 | Row 1, Col 3 | Row 1, Col 4 |
+    | Row 2, Col 1 | Row 2, Col 2 | Row 2, Col 3 | Row 2, Col 4 |
+
+
+
+
+
     |             # Unpriviliged State                         |         # Privileged State                                          |
     |- Processor operates with restricted access to certain    | - Processor has a full access to all instruction and system resource|
     | instructions and system resources.
     |- User level programmed run in this state.                | - Operating system kernals & system level software run in this state|
     | - prevents user programs from interfering with critical  | - it allows oerating system to enforce security ploicies, manage    |
     |   system functions.                                      |   memory and coordinate teh execution of multiple process or threads|
-    
+
+   
 
     
   
