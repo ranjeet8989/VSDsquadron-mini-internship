@@ -84,11 +84,10 @@ PC (programme counter) is another additional register whcih hold the address of 
    The R-Type instruction format in RISC-V 32I is used for arithmetic, logical, and shift instructions. It consists of the following     
    fields:
    
-        31       25 24      20 19      15 14      12 11      7 6        0
-      +------------+--------+--------+--------+--------+--------+--------+
-      |   funct7   |   rs2  |   rs1  |  funct3|    rd  | opcode |   R    |
-      +------------+--------+--------+--------+--------+--------+--------+
-   
+       31       25 24      20 19      15 14      12 11      7 6        0
++------------+--------+--------+--------+--------+--------+--------+
+|   funct7   |   rs2  |   rs1  |  funct3|    rd  | opcode |   R    |
++------------+--------+--------+--------+--------+--------+--------+
 
    - funct7(7 bits) :- it specifies the operatio code of instruction.
    - rs2 (5 bit) :- this field indicates the second source register used by the instruction.
