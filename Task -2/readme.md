@@ -85,10 +85,10 @@ PC (programme counter) is another additional register whcih hold the address of 
    fields:
    
 
-  31       25 24      20 19       15 14      12 11     7 6         0
-  +----------+----------+----------+----------+----------+----------+
-  |  funct7  |   rs2    |   rs1    |   funct3 |   rd     |  opcode  |
-  +----------+----------+----------+----------+----------+----------+
+   31       25 24      20 19      15 14      12 11      7 6        0
++------------+--------+--------+--------+--------+--------+--------+
+|   funct7   |   rs2  |   rs1  |  funct3|    rd  | opcode |   R    |
++------------+--------+--------+--------+--------+--------+--------+
 
 
    - funct7(7 bits) :- it specifies the operatio code of instruction.
