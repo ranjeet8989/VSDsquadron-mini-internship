@@ -267,23 +267,23 @@ The "U" Type instruction in RISC-V architecture is used for unconditional jump i
             " I " Type format.
         loads instruction are encoded into I Type format.loads copy a value from memory to register rd
 
-  10. beq r0, r0, 15
+    10. beq r0, r0, 15
 
       | 31 -30 | 29-25 | 24-20 | 19-15 | 14-12 | 11-8 | 7 | 6-0    |
       |--------|-------|-------|-------|-------|------|---|--------|
       |    0   | 00000 | 00000 | 000   | 00000 | 000  | 0 | 1100011|
   
             "B" Type format.
-11. bne r0,r1,20
+    11. bne r0,r1,20
 
       | 31 | 30-25 | 24-20 | 19-15 | 14-12 | 11-7| 6 | 5-0    |
       |----|-------|-------|-------|-------|-----|---|--------|
       |  0 | 000000| 00001 | 00000 |   001 | 1010| 0 |1100011 |
 
             " B "Type format.
-    The instruction "bne r0, r1, 20" stands for "Branch if Not Equal"
+        The instruction "bne r0, r1, 20" stands for "Branch if Not Equal"
 
-12. sll r15,r1,r2(2)
+    12. sll r15,r1,r2(2)
     
     the above instruction perfrom logical left shift operation on  shift register r1 by the value present in r2 with a shift amount of 2     and stores the result into destniation register r15.
 
@@ -294,12 +294,12 @@ The "U" Type instruction in RISC-V architecture is used for unconditional jump i
           "R" Type fromat.
           it is register register operation.
 
-13. srl r16,r14,r2(2)
+    13. srl r16,r14,r2(2)
 
-    it is right shift logical operation. here 2 is shift in logical right by amount  2.
+      it is right shift logical operation. here 2 is shift in logical right by amount  2.
 
-      | 31-25 | 24-20 | 19-15 | 14-12 | 11-7 | 6-0    |
-      |-------|-------|-------|-------|------|--------|
-      |0000000| 00010 | 01110 | 101   | 10000| 0110011|
+        | 31-25 | 24-20 | 19-15 | 14-12 | 11-7 | 6-0    |
+        |-------|-------|-------|-------|------|--------|
+        |0000000| 00010 | 01110 | 101   | 10000| 0110011|
 
         "R" Type instruction
