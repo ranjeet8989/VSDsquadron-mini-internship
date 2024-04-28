@@ -186,5 +186,120 @@ The "U" Type instruction in RISC-V architecture is used for unconditional jump i
   These function are used for implementing function calls and handling control flows in programs.
   
     
+  # How to identfy the Instruction type ?
+  - Recognise opecode : helps to identify types of operation (airthemetic/logical)
+  - function code : depending on spefic operation ,instruction will have specific operation.
+  - identify registers : 'R' Type instruction format typically involves 3 registers.
+  - check for immediate values : if an instruction involves an immediate values(ADDI), it may be I type.
+
+  # Identifcation of Instruction Type:-
+
+    1. add r6,r2,r1
+
+      | 31-25 | 24-20 | 19-15 | 14-12 | 11-7 | 6-0    |
+      |-------|-------|-------|-------|------|--------|
+      |  00000| 00001 | 00010 | 00110 |  000 | 0110011|
+      
+      by looking it , we can say that it is " R " Type.
+
+    2. sub r7,r1,r2
+
+      | 31-25 | 24-20 | 19-15 | 14-12 | 11-7 | 6-0    |
+      |-------|-------|-------|-------|------|--------|
+      | 00000 | 00010 | 00001 | 00111 | 000  | 0110011|
+        
+        "R" Type.
+
+    3. and r8,r1,r3
+
+      | 31-25 | 24-20 | 19-15 | 14-12 | 11-7 | 6-0     |
+      |-------|-------|-------|-------|------|---------|
+      | 00000 | 00011 | 00001 | 01000 | 111  | 0110011 |
+        
+              " R "Type Format
+
+    4. or r9,r2,r5
+
+      | 31-25 | 24-20 | 19-15 | 14-12 | 11-7 | 6-0    |
+      |-------|-------|-------|-------|------|--------|
+      | 00000 | 00010 | 00101 | 01001 | 110  | 0110011|
+
+             " R " Type format
+
+    5. xor r10,r1,r4
+
+      | 31-25 | 24-20 | 19-15 | 14-12 | 11-7 | 6-0    |
+      |-------|-------|-------|-------|------|--------|
+      | 00000 | 00100 | 00001 | 01010 | 100  | 0110011|
+
+         " R "Type format
+
+    6. slt r11,r2,r4
+
+      | 31-25 | 24-20 | 19-15 | 14-12 | 11-7 | 6-0    |
+      |-------|-------|-------|-------|------|--------|
+      | 00000 | 00100 | 00100 | 01011 | 010  | 0110011|
+
+          " R " Type format
   
-                              
+    7. addi r12,r4,5
+
+      | 31-20        | 19-15 | 14-12 | 11-7 | 6-0    |
+      |--------------|-------|-------|------|--------|
+      | 000000000101 | 00100 | 000   | 01100| 0010011|
+       
+            "I" Type format 
+
+    8. sw r3,r1,2
+
+      | 31-25 | 24-20 | 19-15 | 14-12 | 11-7 | 6-0    |
+      |-------|-------|-------|-------|------|--------|
+      | 000010| 00001 | 00011 | 010   | 010  | 0100011|
+
+           "S" Type format.
+    
+    9.  lw r13,r12
+
+      | 31-20        | 19-15 | 14-12 | 11-7 | 6-0    |
+      |--------------|-------|-------|------|--------|
+      | 000000000010 | 00001 | 01101 | 010  | 0000011|
+
+            " I " Type format.
+        loads instruction are encoded into I Type format.loads copy a value from memory to register rd
+
+  10. beq r0, r0, 15
+
+      | 31 -30 | 29-25 | 24-20 | 19-15 | 14-12 | 11-8 | 7 | 6-0    |
+      |--------|-------|-------|-------|-------|------|---|--------|
+      |    0   | 00000 | 00000 | 000   | 00000 | 000  | 0 | 1100011|
+  
+            "B" Type format.
+11. bne r0,r1,20
+
+      | 31 | 30-25 | 24-20 | 19-15 | 14-12 | 11-7| 6 | 5-0    |
+      |----|-------|-------|-------|-------|-----|---|--------|
+      |  0 | 000000| 00001 | 00000 |   001 | 1010| 0 |1100011 |
+
+            " B "Type format.
+    The instruction "bne r0, r1, 20" stands for "Branch if Not Equal"
+
+12. sll r15,r1,r2(2)
+    
+    the above instruction perfrom logical left shift operation on  shift register r1 by the value present in r2 with a shift amount of 2     and stores the result into destniation register r15.
+
+      | 31-25 | 24-20 | 19-15 | 14-12 | 11-7 | 6-0    |
+      |-------|-------|-------|-------|------|--------|
+      | 00000 | 00010 | 00001 | 000   | 00000| 0110011|
+
+          "R" Type fromat.
+          it is register register operation.
+
+13. srl r16,r14,r2(2)
+
+    it is right shift logical operation. here 2 is shift in logical right by amount  2.
+
+      | 31-25 | 24-20 | 19-15 | 14-12 | 11-7 | 6-0    |
+      |-------|-------|-------|-------|------|--------|
+      |0000000| 00010 | 01110 | 101   | 10000| 0110011|
+
+        "R" Type instruction
