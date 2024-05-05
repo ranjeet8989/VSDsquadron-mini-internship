@@ -1,4 +1,4 @@
-# C program : sum of number from 1 to n 
+# Compiled C Code : sum of number from 1 to n 
 
 step 1: command used in terminal window
 ```bash
