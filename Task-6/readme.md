@@ -2,10 +2,10 @@
 
 1. Overview :-
    
-  <p style="text-align: justify;">
-  The goal of this project is to make an LED blink on the VSD Squadron Mini Debugger Board. This involves setting up the board, writing a simple program to control an LED,
-  compiling the program, and uploading it to the board using OpenOCD.
-  </p>
+   <p style="text-align: justify;">
+   The goal of this project is to make an LED blink on the VSD Squadron Mini Debugger Board. This involves setting up the board, writing a simple program to control an LED,
+   compiling the program, and uploading it to the board using OpenOCD.
+   </p>
 
 2. Components Required :-
 
@@ -15,15 +15,15 @@
 
 3. Steps Required for Hardware setup:-
 
-**Setup the Development Environment**
+   **Setup the Development Environment**
    
   - Install RISC-V GCC Toolchain: Ensure you have the necessary compiler for RISC-V.
   - Install OpenOCD: This is used for flashing the program to the board.
   - Drivers: Ensure you have the correct USB drivers installed for your operating system.
 
-  **Hardware Setup**
+    **Hardware Setup**
 
-  - Connect the LED to a GPIO pin on the VSD Squadron Mini Debugger Board with a current-limiting resistor in series.
+  - Connect the LED to a GPIO pin on the VSD Squadron Mini Debugger Board .
   - Power the board via the USB cable.
 
 4. Application code (C code ) for Led Blinking:-
