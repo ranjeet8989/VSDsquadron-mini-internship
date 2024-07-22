@@ -1,78 +1,77 @@
-# Led blinking project on VSDSquadron Mini board :
+# Project Name : 4 Digit Display Counter using VSDsquadron RISC-V Dev. Board with TM1637 Driver via I2C Protocol.
 
-1. Overview :-
+**1. Overview :-**
+
+This project explains how to build a 4-digit counter with the VSDsquadron RISC-V development board and the TM1637 display driver. The communication between the development board and the display driver is facilitated via the I2C protocol, allowing efficient and reliable data transfer.The VSDsquadron Board is powered by CH32V003 chip with 32 RISC-V core based on RV32CE Instruction set which is operated under 24Mhz clock freqeuncy.with very high speed memory : 2KB SRAM for volatile data storage ,16KB code flash for programme memory.it
+has on board programmer chip CH32V305 where code deployment and debugging is done.
+
+**2. Components Required :-**
+
+- VSDSquadron Mini RISC-V development board
+- USB cable Type C
+- TM1637 ( Display Driver)
+- 4 Jumper wires with diffrent colour 
+- Development environment ( Arduino IDE)
+
+**3. Development Environment Setup Steps:-**
    
-   <p style="text-align: justify;">
-   The goal of this project is to make an LED blink on the VSD Squadron Mini Debugger Board. This involves setting up the board, writing a simple program to control an LED,
-   compiling the program, and uploading it to the board using OpenOCD.
-   </p>
-
-2. Components Required :-
-
-- VSD Squadron Mini Debugger Board
-- USB cable
-- Development environment (RISC-V GCC toolchain, OpenOCD)
-
-3. Steps Required for Hardware setup:-
-
-   **Setup the Development Environment**
-   
-  - Install RISC-V GCC Toolchain: Ensure you have the necessary compiler for RISC-V.
+  - Open the Arduino IDE.
+  - Install TM1637 library in Arduino IDE
+  - Go to File > Preferences.
+  - In the "Additional Board Manager URLs" field, add the following URL
+    https://github.com/openwch/board_manager_files/raw/main/package_ch32v_index.json
+  - select tools ----> Boards ----> CH32 MCU EVT Boards ---->CH32V00x
   - Install OpenOCD: This is used for flashing the program to the board.
   - Drivers: Ensure you have the correct USB drivers installed for your operating system.
 
-    **Hardware Setup**
+**4.1 Circuit Connection :**
 
-  - Connect the LED to a GPIO pin on the VSD Squadron Mini Debugger Board .
-  - Power the board via the USB cable.
+   - PD4 GPIO Pin is connected to Clk pin of TM1637 Driver 
+   - PD2 GPIO Pin is connected to DIO (Data Input Output ) of Display Driver(TM1637)
+   - Power supply (5V ) is given to VCC Port of Display Driver
+   - and there some ground pin connections.
 
-4. Application code (C code ) for Led Blinking:-
+4.2 **Pin connection Table :**
+
+	| TM1637 Display Driver | VSDsquadron Board   |
+	|-----------------------|---------------------|
+	| CLK                   | PD4 (GPIO Pin)      |
+	| DIO                   | PD2 (GPIO Pin)      |
+	| VCC                   | 5V                  |
+	| GND                   | GND                 |
+
+
+ **5. Circuit Design with pin connection:**
+
+![connection_bord](https://github.com/user-attachments/assets/0509f23f-774f-4807-a4a5-7af972e651e4)
+
+
+**4. Application code (C code ) for count sequence (0000 to 9999 ):-**
 
 ```sh
-#include <ch32v00x.h>
-#include <debug.h>
+#include<TM1637Display.h>
+#define CLK PD4
+#define DIO PD2
 
-#define BLINKY_GPIO_PORT GPIOD
-#define BLINKY_GPIO_PIN GPIO_Pin_6
-#define BLINKY_CLOCK_ENABLE RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE)
+TM1637Display display(CLK,DIO);
 
-void NMI_Handler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
-void HardFault_Handler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
-void Delay_Init(void);
-void Delay_Ms(uint32_t n);
+void setup() {
+  // initilise the display
+  display.setBrightness(4);
 
-int main(void)
-{
-	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
-	SystemCoreClockUpdate();
-	Delay_Init();
-
-	GPIO_InitTypeDef GPIO_InitStructure = {0};
-
-	BLINKY_CLOCK_ENABLE;
-	GPIO_InitStructure.GPIO_Pin = BLINKY_GPIO_PIN;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(BLINKY_GPIO_PORT, &GPIO_InitStructure);
-
-	uint8_t ledState = 0;
-	while (1)
-	{
-		GPIO_WriteBit(BLINKY_GPIO_PORT, BLINKY_GPIO_PIN, ledState);
-		ledState ^= 1; // invert for the next run
-		Delay_Ms(3000);
-	}
 }
 
-void NMI_Handler(void) {}
-void HardFault_Handler(void)
-{
-	while (1)
-	{
-	}
+void loop() {
+  //  main code , to run repeatedly:
+  for(int i =0;i<=9999;i++)
+  {
+    display.showNumberDec(i,true);
+    delay(100);
+  }
+
 }
    ```
 
-5. Led Blinking Video
+**5. Led Blinking Video:**
 
-   https://drive.google.com/drive/u/0/folders/1SaBz9WaXcjdF0bklpkkaUuGQpa2vX_32
+   [https://drive.google.com/drive/u/0/folders/1SaBz9WaXcjdF0bklpkkaUuGQpa2vX_32]
